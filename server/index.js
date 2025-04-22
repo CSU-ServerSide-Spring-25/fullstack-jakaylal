@@ -11,8 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Define a simple API route
-app.get('/forecast', async (req, res) => {  // example /forecast?location=31909&days=3
+app.get('/forecast', async (req, res) => {  // example with data /forecast?location=31909&days=3
     try {
         const result = await forecastApi(req.query.location, req.query.days);
         res.send(stringify(result));
@@ -22,7 +21,6 @@ app.get('/forecast', async (req, res) => {  // example /forecast?location=31909&
     }
 });
 
-// Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

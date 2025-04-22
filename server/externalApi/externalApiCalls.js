@@ -11,7 +11,6 @@ const axios = require('axios');
                  console.log(error);
                  return{ error: "Unable to fetch forecast information." }
              })
-         // return results;
      },
      // add alert API call hint: change forecast.json to match api wanted 
      // add current API
