@@ -11,7 +11,8 @@
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "flatted": "^3.3.3"
+    "flatted": "^3.3.3",
+    "my-node-react-app": "file:.."
   },
   "author": "",
   "license": "ISC"
