@@ -10,11 +10,8 @@ function App() {
     const checkClassActive = (tab) => {
         return `btn btn-${tab === activeTab ? 'primary' : 'dark'}`
     }
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-        const zipCode = formData.get('zipCode')
-        let url = 'https://9000-csuserversi-csuserversi-6rn9vahg5pr.ws-us118.gitpod.io'
+    const handleSubmit = (zipCode) => {
+        let url = 'http://127.0.0.1:9000'
         switch (activeTab) {
             case ('f'):
                 url += `/forecast?location=${zipCode}&days=3`;
@@ -28,17 +25,16 @@ function App() {
             default:
                 break;
         }
-        if (url) {
-            axios.get(url).then(response => {
-                const respData = {}
-                respData[activeTab] = response.data
-                setActiveTabData({ ...activeTab, ...respData })
-            }).catch(err => {
-                setShowAlert(true)
-            })
-        }
+        axios.get(url).then(response => {
+            const respData = {}
+            respData[activeTab] = response.data
+            setActiveTabData({ ...activeTabData, ...respData })
+        }).catch(err => {
+            console.log(err)
+            setShowAlert(true)
+        })
     }
-
+console.log(activeTabData)
     return (
         <div>
             <Navbar

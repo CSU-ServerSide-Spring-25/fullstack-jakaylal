@@ -9,7 +9,7 @@ const Navbar = (props) => {
     const validateAndSubmit = (e) => {
         e.preventDefault()
         if (isValid === 'is-valid') {
-            handleSubmit(e)
+            handleSubmit(formData.zipCode)
         }
     }
     const changeValidate = (value) => {
