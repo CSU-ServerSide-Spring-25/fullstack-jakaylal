@@ -20,6 +20,10 @@ app.get('/forecast', async (req, res) => {  // example with data /forecast?locat
     }
 });
 
+// app.get /current location
+
+//app.get /alerts
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -7,9 +7,9 @@ const WeatherTabResults = (props) => {
         case ('f'):
             return <Forecast activeTabData={activeTabData.f} />
         case ('c'):
-            return <>Current</>
+            return <>Current under construction</>
         case ('a'):
-            return <>Alert</>
+            return <>Alert under construction</>
         default:
             return null;
     }

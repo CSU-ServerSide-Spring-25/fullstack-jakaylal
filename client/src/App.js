@@ -34,7 +34,6 @@ function App() {
             setShowAlert(true)
         })
     }
-console.log(activeTabData)
     return (
         <div>
             <Navbar
@@ -56,7 +55,6 @@ console.log(activeTabData)
                         Weather App. CSU
                     </p>
                 </div>
-
             </div>
         </div>
     );
