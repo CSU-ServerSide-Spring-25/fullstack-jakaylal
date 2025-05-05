@@ -60,3 +60,7 @@ Bug-Free-Sniffle
 - The React client will be running on `http://localhost:9010`.
 
 You can access the application in your web browser at the client URL. The client will communicate with the server to fetch and display data as needed.
+
+
+# Edits Made
+The API endpoints I made were for current and alert. I copied the url from the weather api website placed them into the externalApiCalls class so they would be called. In index.js, I created the app.get functions for current and alert as well. Lastly, in App.js, I added the urls for the parameters in which the apis would be called.

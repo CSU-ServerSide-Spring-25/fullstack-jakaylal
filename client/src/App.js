@@ -17,10 +17,10 @@ function App() {
                 url += `/forecast?location=${zipCode}&days=3`;
                 break;
             case ('c'):
-                url += 'AddYourCurrentHere'
+                url += `/current?location=${zipCode}&days=3`;
                 break;
             case ('a'):
-                url += 'addyouralertshere'
+                url += `/alerts?location=${zipCode}&days=3`;
                 break;
             default:
                 break;
